@@ -21,8 +21,8 @@ class SimpleMotor:
         self.b = b
 
         # Controller gains
-        self.Kp = Kp
-        self.Kd = Kd
+        self.Kp = 2.0
+        self.Kd = 0.18
 
         # Torque saturation
         self.tau_max = tau_max
@@ -210,4 +210,5 @@ def on_slider_change(val):
 target_slider.on_changed(on_slider_change)
 
 plt.tight_layout(rect=[0, 0.05, 1, 1])
+
 plt.show()
